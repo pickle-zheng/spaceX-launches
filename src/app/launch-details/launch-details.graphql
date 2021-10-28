@@ -3,9 +3,13 @@ query launchDetails($id: ID!) {
     id
     mission_name
     details
+    launch_date_utc
     links {
       flickr_images
       mission_patch
+    }
+    rocket {
+      rocket_name
     }
   }
 }

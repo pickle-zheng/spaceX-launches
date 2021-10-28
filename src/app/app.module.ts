@@ -7,10 +7,18 @@ import { LaunchListComponent } from './launch-list/launch-list.component';
 import { LaunchDetailsComponent } from './launch-details/launch-details.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
+import { RelativeTimePipe } from './relative-time/relative-time.pipe';
 
 @NgModule({
-  declarations: [AppComponent, LaunchListComponent, LaunchDetailsComponent],
-  imports: [BrowserModule, AppRoutingModule, GraphQLModule, HttpClientModule],
+  declarations: [AppComponent, LaunchListComponent, LaunchDetailsComponent, RelativeTimePipe],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    GraphQLModule,
+    HttpClientModule,
+    MatCardModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
